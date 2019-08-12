@@ -1,19 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LoginActivity"
-    android:orientation="vertical">
+    >
 
-<EditText
-    android:id="@+id/etUserName"
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:text="Parstagram"
+        android:textStyle="italic|bold"
+        android:layout_marginTop="150dp"
+        android:layout_marginLeft="120dp"
+        />
+<LinearLayout
+    android:id="@+id/ll"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:hint="username"
-    android:inputType="text"
-    android:ems="10" />
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/etUserName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="username"
+        android:inputType="text"
+        android:ems="10"
+        android:layout_marginTop="200dp"
+        android:layout_marginBottom="10dp"/>
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
@@ -26,13 +43,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Password"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:layout_marginBottom="10dp"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/btnLogin"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:text="Login"
         android:background="@color/colorPrimaryDark"
         android:layout_marginBottom="20dp"
@@ -45,4 +63,10 @@
         android:text="Sign Up"
         android:background="@color/cardview_dark_background"/>
 
+
+
 </LinearLayout>
+
+
+
+</RelativeLayout>

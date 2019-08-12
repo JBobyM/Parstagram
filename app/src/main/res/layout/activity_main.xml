@@ -16,6 +16,7 @@
         android:layout_marginTop="650dp"
         >
 
+
     <ImageView
         android:id="@+id/ivHome"
         android:layout_width="50dp"
@@ -23,12 +24,16 @@
         android:src="@drawable/instagram_home_outline_24"
         android:layout_marginRight="115dp"
         />
+
+
         <ImageView
             android:id="@+id/ivNewPost"
             android:layout_width="50dp"
             android:layout_height="40dp"
             android:src="@drawable/instagram_new_post_outline_24"
             android:layout_marginRight="115dp"/>
+
+
         <ImageView
             android:id="@+id/ivUserLogout"
             android:layout_width="50dp"
@@ -37,8 +42,5 @@
 
 
     </LinearLayout>
-
-
-
 
 </RelativeLayout>
