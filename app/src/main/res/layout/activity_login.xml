@@ -33,12 +33,16 @@
         android:id="@+id/btnLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Login" />
+        android:text="Login"
+        android:background="@color/colorPrimaryDark"
+        android:layout_marginBottom="20dp"
+        />
 
     <Button
         android:id="@+id/btnSignIn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Sign Up"/>
+        android:text="Sign Up"
+        android:background="@color/cardview_dark_background"/>
 
 </LinearLayout>

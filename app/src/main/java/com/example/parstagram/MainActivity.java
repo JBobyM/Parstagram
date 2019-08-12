@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
@@ -35,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageView ivPostImage;
     private Button btnSubmit;
     private Button btnLogout;
+    private ImageView ivProgressBar;
 
     public final static int CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE = 1034;
     public String photoFileName = "photo.jpg";
@@ -50,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
         ivPostImage=findViewById(R.id.ivPostImage);
         btnSubmit=findViewById(R.id.btnSubmit);
         btnLogout = findViewById(R.id.btnLogout);
+        ivProgressBar = findViewById(R.id.ivProgressBar);
 
         btnCaptureImage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,6 +69,12 @@ public class MainActivity extends AppCompatActivity {
                 ParseUser user = ParseUser.getCurrentUser();
                 savePost(description, user, photoFile);
 
+                // on some click or some loading we need to wait for...
+                ProgressBar pb = (ProgressBar) findViewById(R.id.pbLoading);
+                pb.setVisibility(ProgressBar.VISIBLE);
+                // run a background job and once complete
+                // pb.setVisibility(ProgressBar.INVISIBLE);
+
             }
         });
         btnLogout.setOnClickListener(new View.OnClickListener() {
@@ -76,6 +85,8 @@ public class MainActivity extends AppCompatActivity {
                 goLoginActivity(currentUser);
             }
         });
+
+
     }
 
     private void goLoginActivity(ParseUser currentUser) {
