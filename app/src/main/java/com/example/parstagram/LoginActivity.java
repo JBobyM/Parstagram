@@ -63,12 +63,14 @@ public class LoginActivity extends AppCompatActivity {
         user.signUpInBackground(new SignUpCallback() {
             @Override
             public void done(ParseException e) {
-                if (e==null){
-                    goMainActivity();
-                }
-                else {
+                if (e!=null){
                     Log.d(TAG, "Sign Up didn't succeed!");
                     e.printStackTrace();
+
+                }
+                else {
+                    goMainActivity();
+
                 }
 
 
