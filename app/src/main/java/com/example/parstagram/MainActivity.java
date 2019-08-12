@@ -7,8 +7,6 @@ import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.parse.ParseUser;
-
 public class MainActivity extends AppCompatActivity {
     private ImageView ivHome;
     private ImageView ivNewPost;
@@ -49,13 +47,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-
-
-
-    }
-    private void goLoginActivity(ParseUser currentUser) {
-        Intent i = new Intent(this,LoginActivity.class);
-        startActivity(i);
     }
 
 }

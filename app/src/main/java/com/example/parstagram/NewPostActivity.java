@@ -58,6 +58,13 @@ public class NewPostActivity extends AppCompatActivity {
         ivNewPost = findViewById(R.id.ivNewPost);
         ivUserLogout = findViewById(R.id.ivUserLogout);
 
+        btnCaptureImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                launchCamera();
+            }
+        });
+
 
         ivHome.setOnClickListener(new View.OnClickListener() {
             @Override
