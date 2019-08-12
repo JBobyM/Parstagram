@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewPostActivity"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/etDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Description"
+        android:inputType="textPersonName"
+        />
+
+    <Button
+        android:id="@+id/btnCaptureImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Take a picture" />
+
+    <ImageView
+        android:id="@+id/ivPostImage"
+        android:layout_width="match_parent"
+        android:layout_height="390dp"
+        tools:srcCompat="@tools:sample/avatars"
+        android:rotation="90"
+        />
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SUBMIT"
+        android:layout_marginBottom="120dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <ImageView
+            android:id="@+id/ivHome"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:src="@drawable/instagram_home_outline_24"
+            android:layout_marginRight="115dp"
+            />
+        <ImageView
+            android:id="@+id/ivNewPost"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:src="@drawable/instagram_new_post_outline_24"
+            android:layout_marginRight="115dp"/>
+        <ImageView
+            android:id="@+id/ivUserLogout"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:src="@drawable/instagram_user_outline_24"/>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
